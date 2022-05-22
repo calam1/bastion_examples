@@ -1,0 +1,20 @@
+[package]
+name = "hello-tokio"
+version = "0.1.0"
+edition = "2021"
+
+
+[features]
+tokio-runtime = ["bastion-executor/tokio-runtime"]
+
+[dependencies]
+anyhow = "1.0.57"
+bastion = "0.4.5"
+bastion-executor = "0.4.2"
+tokio = { version = "1.18.2", features = ["time", "macros"] }
+tracing = "0.1.34"
+tracing-subscriber = "0.3.11"
+
+[[bin]]
+name = "hello_tokio"
+path = "src/hello_tokio.rs"
